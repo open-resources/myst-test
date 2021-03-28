@@ -2,16 +2,26 @@
 substitutions:
     a: 100*2
     b: 2
+    c: 100
 ---
 
-Here is the variable: {{a}} and {{b}}. The variable should appear.
+Here is the variable: {{a}} and {{b}}. Interestingly, I think I can do simple math though:
 
-| a | b |
-|---|---|
-| 1 | 2 |
-| 3 | 4 |
-| 5 | 6 |
+- {{b}} x {{c}} = {{b*c}}
+- {{b}} + {{c}} = {{b+c}}
+- {{b}} / {{c}} = {{b / c}}
 
-A footnote [^1]
+What I really want though, is to use a python function and then do a Jinja2 substitution:
 
-[^1]: some details
+```{code-block} python
+
+def random_velocity():
+    import random
+
+    x = random.randint(0,100)
+    v = random.randint(200,300)
+
+    return x*v
+```
+
+The output of the python function is: {{random_velocity()}} m/s.
