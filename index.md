@@ -3,9 +3,9 @@ substitutions:
     a: 100*2
     b: 2
     c: 100
-title: 
-sig_figs:
-image:
+title: 'Bike on a street'
+sig_figs: True
+image: img.png
 solutions_file = sol5.py
 ---
 
