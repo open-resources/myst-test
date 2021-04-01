@@ -3,6 +3,10 @@ substitutions:
     a: 100*2
     b: 2
     c: 100
+title: 
+sig_figs:
+image:
+solutions_file = sol5.py
 ---
 
 Here is the variable: {{a}} and {{b}}. Interestingly, I think I can do simple math though:
@@ -24,4 +28,4 @@ def random_velocity():
     return x*v
 ```
 
-The output of the python function is: {{random_velocity()}} m/s.
+The output of the python function is: {{ random_velocity() }} m/s.
